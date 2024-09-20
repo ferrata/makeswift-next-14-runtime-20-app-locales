@@ -1,5 +1,4 @@
-import React from 'react';
-import { MakeswiftProvider } from '../../makeswift/provider'
+import { MakeswiftProvider } from '@/makeswift/provider'
 import { DraftModeScript } from '@makeswift/runtime/next/server'
 
 type Params = { lang: string; path?: string[] }
@@ -15,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang={params.lang}>
       <head>
-        <DraftModeScript appOrigin={process.env.MAKESWIFT_APP_ORIGIN} />
+      <DraftModeScript appOrigin={process.env.MAKESWIFT_APP_ORIGIN} />
       </head>
       <body>
         <MakeswiftProvider>{children}</MakeswiftProvider>
